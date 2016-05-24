@@ -117,9 +117,6 @@ exports.isValidCode = function validCode (code) {
 }
 
 exports.validate = function validate (multihash) {
-  if (!(Buffer.isBuffer(multihash))) {
-    throw new Error('multihash must be a Buffer')
-  }
 
   if (multihash.length < 3) {
     throw new Error('multihash too short. must be > 3 bytes.')
